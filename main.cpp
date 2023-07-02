@@ -1,3 +1,4 @@
+#include "hueapi.h"
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -12,6 +13,8 @@ int main(int argc, char *argv[])
         &app, []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
     engine.load(url);
+
+    HueApi* test = new HueApi();
 
     return app.exec();
 }
