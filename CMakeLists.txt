@@ -31,6 +31,7 @@ set_target_properties(HueController PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+find_package(OpenSSL REQUIRED)
 target_link_libraries(HueController
     PRIVATE Qt6::Quick
 )

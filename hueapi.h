@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QSslSocket>
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 class HueApi : public QObject
 {
