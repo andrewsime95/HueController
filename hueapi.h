@@ -25,6 +25,7 @@ signals:
 private slots:
   void handleEncrypted();
 
+    void handleReceived(QNetworkReply *reply);
 private:
     QSslSocket* sock;
     QNetworkAccessManager* netMan;
@@ -44,8 +45,8 @@ private:
 
     void updateHubsOnNetwork();
 
-    QVector<HubDev_t> hubDevs;
-    QList<HubDev_t> getDevicesOnNetwork();
+    QVector<HubDev_t>* hubDevs;
+    QVector<HubDev_t>* getDevicesOnNetwork();
 };
 
 #endif // HUEAPI_H
